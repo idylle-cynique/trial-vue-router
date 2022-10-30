@@ -1,0 +1,11 @@
+version: '3'
+services:
+  front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/front
+    command: sh -c "cd vite-project && npm run dev"
+    ports:
+        - "3003:5173"
